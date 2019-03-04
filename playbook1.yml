@@ -1,6 +1,11 @@
 - hosts: group1
+  vars:
+    - msg1: "Hello wonderful world - {{ name_machine }}"
+    - name_machine : "VBOX55"
+
+
 
   tasks:
   
   - name: echo
-    shell: "echo 'HELLO WORLD'"
+    shell: "echo '{{ msg1 }}"
